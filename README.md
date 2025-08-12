@@ -4,6 +4,11 @@
 
 API simples para validar senhas usando múltiplas regras de validação implementadas como componentes Spring.
 
+Cada regra é uma classe isolada que implementa a mesma interface PasswordRule.
+Um validador central (PasswordValidator) recebe uma lista de regras ativas.
+A lista de regras vem de configuração externa (application.yml), evitando hardcoding.
+Você pode adicionar novas regras sem alterar o core (OCP — Open/Closed Principle).
+
 ---
 
 ## Como funciona
